@@ -8,7 +8,7 @@ public class RecourceUI : MonoBehaviour
     public Recource recource;
 
     public Text WarningText;
-    public float WarningDuration = 1;
+    public float WarningDuration;
 
 	void Start()
     {
