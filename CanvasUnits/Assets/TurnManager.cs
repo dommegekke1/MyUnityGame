@@ -9,19 +9,23 @@ public class TurnManager : MonoBehaviour
     int maxPlayers;
     int currentPlayer = 0;
 
+    public Player GetCurrentPlayer()
+    {
+        return Players[currentPlayer];
+    }
+
     public void Start()
     {
         foreach (Player player in Players)
         {
             player.Disable();
         }
-        EndTurn();
+        Players[currentPlayer].Enable();
     }
-
 
     public void EndTurn()
     {
-        Players[currentPlayer].Enable();
+        Players[currentPlayer].Disable();
 
         maxPlayers = Players.Count - 1;
         if (maxPlayers > currentPlayer)
@@ -33,6 +37,6 @@ public class TurnManager : MonoBehaviour
             currentPlayer = 0;
         }
 
-        Players[currentPlayer].Disable();
+        Players[currentPlayer].Enable();
     }
 }

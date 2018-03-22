@@ -23,13 +23,13 @@ public class Resource : MonoBehaviour
     public void AddAmount(int value)
     {
         quantity += value;
-        updateUI();
+        UpdateUI();
     }
 
     public void RemoveAmount(int value)
     {
         quantity -= value;
-        updateUI();
+        UpdateUI();
     }
 
     public bool CanAfford(int cost)
@@ -44,7 +44,7 @@ public class Resource : MonoBehaviour
     }
     
 
-    void updateUI()
+    void UpdateUI()
     {
         OnValueChanged.Invoke(); // Invoke the event.
     }

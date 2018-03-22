@@ -36,7 +36,6 @@ public class UnitFactory : MonoBehaviour
         
             newUnit.transform.SetParent(cell.transform, false);
             newUnit.Owner = Owner;
-            newUnit.Map = Map;
         }
         else
         {
